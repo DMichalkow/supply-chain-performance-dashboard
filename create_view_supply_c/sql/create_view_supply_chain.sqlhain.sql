@@ -8,10 +8,10 @@ SELECT
     -- bazowy czas dostawy
     DATEDIFF(DAY, soh.OrderDate, soh.ShipDate) 
 
-    -- wp³yw produktu (ró¿na trudnoœæ logistyczna)
+    -- wpÂ³yw produktu (rÃ³Â¿na trudnoÅ“Ã¦ logistyczna)
     + (sod.ProductID % 4)
 
-    -- wp³yw regionu (ró¿ne odleg³oœci)
+    -- wpÂ³yw regionu (rÃ³Â¿ne odlegÂ³oÅ“ci)
     + (soh.TerritoryID % 3)
 
     AS DeliveryTime,
